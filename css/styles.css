@@ -1,0 +1,607 @@
+* {
+    box-sizing: border-box;
+}
+
+/* colour palette */
+:root {
+    --primary-color: #C24325;
+    --secondary-color: #caf2e1;
+    --text: #3E2B23;
+    --page-background: #f5f2ef;
+
+    /* colour palette with oklch colour values */
+    --dark: oklch(0.3 0.1 50);
+    --button: oklch(0.7 0.1 50);
+    --hover: oklch(0.8 0.05 70);
+}
+
+/* image styling */
+* img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* typography */
+body {
+    font-family: 'Inter', Helvetica, Arial, system-ui, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: var(--page-background);
+    color: var(--text);
+}
+
+h1, h2 {
+    font-family: 'Momo Signature', cursive;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.2;
+    text-wrap: balance;
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 10px;
+}
+
+h3 {
+    font-family: 'Inter', Helvetica, Arial, system-ui, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-wrap: balance;
+    text-transform: uppercase;
+    color: var(--dark);
+}
+
+h4 {
+    font-family: 'Inter', Helvetica, Arial, system-ui, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--dark);
+}
+
+h5 {
+    font-family: 'Inter', Helvetica, Arial, system-ui, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--dark);
+}
+
+/* site header styling */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: var(--primary-color);
+}
+
+.site-title a {
+    color: var(--page-background);
+    text-decoration: none;
+}
+
+.main-nav {
+    display: flex;
+    gap: 30px;
+    color: var(--page-background);
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--page-background);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover, a:focus {
+    color: var(--secondary-color);
+    text-decoration: wavy underline;
+    text-decoration-color: var(--secondary-color);
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: var(--primary-color);
+    color: var(--page-background);
+    padding: 8px 16px;
+    z-index: 100;
+    transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
+/* card display */
+#projects-carousel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.card {
+    flex: 1;
+    flex-basis: 300px;
+    border: 2px solid var(--dark);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px 5px 0 0;
+}
+
+.card h3 {
+    margin: 10px;
+}
+
+.card p {
+    margin: 10px;
+    text-align: justify center;
+}
+
+.card a {
+    display: inline-block;
+    margin: 10px;
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    color: var(--page-background);
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.card a:hover, .card a:focus {
+    background-color: var(--hover);
+    color: var(--text);
+    text-decoration: wavy underline;
+    text-decoration-color: var(--text);
+    border: 1px solid var(--text);
+}
+
+/* skill list banner */
+
+#skills-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 75px;
+    list-style: none;
+    height: 100px;
+    background-color: var(--text);
+    color: var(--page-background)
+}
+
+#skills-list li {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+/* styling the about section */
+#about {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    grid-template-areas: 
+        "image title"
+        "image description"
+        "image link"
+        "image .";
+    gap: 20px;
+}
+
+#about h2 {
+    grid-area: title;
+    padding: 0px;
+}
+
+#about p {
+    grid-area: description;
+}
+
+#about a {
+    grid-area: link;
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--text);
+}
+
+#about a:hover, #about a:focus {
+    grid-area: link;
+    text-decoration: wavy underline;
+    color: var(--primary-color);
+}
+
+#about img {
+    grid-area: image;
+}
+
+/* styling the ramblings section */
+#ramblings {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "title link"
+        "first second";
+    gap: 40px;
+
+    background-color: var(--text);
+    padding: 20px 40px 60px 40px;
+}
+
+#ramblings h2 {
+    grid-area: title;
+    color: var(--secondary-color);
+}
+
+#ramblings a {
+    grid-area: link;
+    padding: 60px 0 0 0;
+    color: var(--page-background);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#ramblings a:hover, #ramblings a:focus {
+    text-decoration: wavy underline;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+#ramblings article {
+    background-color: var(--page-background);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#nov-5 {
+    grid-area: first;
+}
+
+#nov-3 {
+    grid-area: second;
+}
+
+/* projects list & let's connect form */
+#bottom-section {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+        "projects connect";
+}
+
+#projects-list {
+    grid-area: projects;
+    padding: 0 0 0 40px;
+    border-right-style: solid;
+    border-right-color: var(--text);
+}
+
+#projects-list li a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+#projects-list li a:hover, #projects-list li a:focus {
+    text-decoration: wavy underline;
+}
+
+#button-view-projects {
+    display: inline-block;
+    margin: 10px;
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    color: var(--page-background);
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#button-view-projects:hover, #button-view-projects:focus {
+    background-color: var(--hover);
+    color: var(--text);
+    text-decoration: wavy underline;
+    text-decoration-color: var(--text);
+    border: 1px solid var(--text);
+}
+
+#contact {
+    grid-area: connect;
+    padding: 0 20px 40px 60px;
+}
+
+#contact input[type=text], #contact input[type=email] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+#contact select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #b4b2b1;
+    background-color: #fefefe;
+}
+
+#contact textarea {
+    width: 100%;
+    padding: 12px;
+}
+
+#contact button {
+    width: 100%;
+    border: none;
+    color: var(--page-background);
+    background-color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 15px;
+    font-weight: 500;
+}
+
+#contact button:hover, #contact button:focus {
+    width: 100%;
+    border: 1px solid var(--text);
+    color: var(--text);
+    background-color: var(--hover);
+    text-decoration: wavy underline;
+    text-decoration-color: var(--text);
+    font-weight: 500;
+    padding: 15px
+}
+
+/* styling the footer */
+footer {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+        "copyright socials";
+    gap: 40px;
+
+    background-color: var(--primary-color);
+    color: var(--page-background);
+    padding: 40px 20px 20px 20px;
+}
+
+footer p {
+    grid-area: copyright;
+}
+
+footer table {
+    width: 100%;
+}
+footer table caption {
+    font-family: 'Momo Signature', cursive;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: left;
+    text-transform: lowercase;
+}
+
+footer table th {
+    position: absolute;
+    bottom: -100px;
+    left: -100px;
+}
+
+footer table td a {
+    color: var(--secondary-color);
+}
+
+
+
+/* STYLING THE ABOUT PAGE */
+#about-content {
+    display: grid;
+    grid-template-columns: 500px 2fr;
+    grid-template-areas: 
+        "image title"
+        "image intro"
+        "image outside"
+        "image p"
+        "image fav"
+        "image list"
+        "image link";
+    gap: 5px;
+    padding: 20px 20px 40px 20px;
+}
+
+#about-content img {
+    grid-area: image;
+}
+
+#about-content h2 {
+    grid-area: title;
+    margin: 20px;
+}
+
+#about-content #intro {
+    grid-area: intro;
+    margin: 20px;
+}
+
+#outside-design {
+    grid-area: outside;
+    margin: 20px;
+}
+
+#about-content p {
+    grid-area: p;
+    margin: 20px;
+}
+
+#about-fav {
+    grid-area: fav;
+    margin: 20px;
+} 
+
+#about-content dl {
+    grid-area: list;
+    margin: 20px;
+}
+
+#about-content dt {
+    font-weight: 500;
+    color: var(--dark);
+    padding: 0 15px 0 0;
+}
+
+#about-content #projects-link {
+    grid-area: link;
+    margin: 20px;
+}
+
+#about-content a {
+    color: var(--primary-color);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+#about-content a:hover, #about-content a:focus {
+    text-decoration: wavy underline;
+}
+
+/* STYLING INDIVIDUAL PROJECT PAGES */
+#project-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px;
+    text-align: center;
+}
+
+#project-links a {
+    color: var(--primary-color);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+#project-links a:hover, #project-links a:focus {
+    text-decoration: wavy underline;
+}
+
+#dirtypig, #mountadanac, #letstalk, #purefreshness {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+        "title first"
+        "list second";
+    gap: 5px;
+    padding: 20px;
+}
+
+#dirtypig h2, #mountadanac h2, #letstalk h2, #purefreshness h2 {
+    grid-area: title;
+    margin: 10px 0 0 40px;
+}
+
+.first {
+    grid-area: first;
+}
+
+.second {
+    grid-area: second;
+
+}
+
+.project-design {
+    grid-area: list;
+    margin: 20px;
+
+    list-style-type: none;
+    list-style-position: outside;
+    font-weight: 500;
+}
+
+#dirtypig-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+#mountadanac-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#project-3 video {
+    width: 100%;
+}
+
+#letstalk-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#purefreshness-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* STYLING RAMBLINGS PAGE */
+#ramblings-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "title title title ."
+        "archives content content content";
+    gap: 20px;
+    padding: 0 0 60px 0;
+}
+
+#ramblings-title {
+    grid-area: title;
+    margin: 0 0 0 40px;
+    border-bottom-style: solid;
+    border-color: var(--dark);
+}
+
+#ramblings-title em {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+#archives {
+    grid-area: archives;
+    margin: 0 0 0 40px;
+    padding: 20px;
+
+    background-color: var(--secondary-color);
+}
+
+#archives h3 {
+    margin: 0 0 0 10px;
+}
+
+#november {
+    grid-area: content;
+    display: grid;
+    gap: 10px;
+    padding: 0 20px 0 0;
+    margin: 0 0 0 20px;
+}
+
+#november article {
+    padding: 30px;
+    border-style: solid;
+    border-color: var(--dark);
+}
+
+#november article em {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    padding: 10px;
+    color: var(--page-background);
+}
+
+/* STYLING MAIN CONTACT PAGE */
+#main-contact {
+    background-color: var(--page-background);
+}

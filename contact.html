@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get in Contact form | milleedesigns</title>
+    <meta name="description" content="Get in contact with milleedesigns by filling out the contact form. Specify what kind of service you are looking for and she will reach out to you within one-to-two business days.">
+    <link rel="canonical" href="https://sinc0172.github.io/sinc0172-a10/contact.html">
+
+     <!-- typefaces from google; main headings and body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Momo+Signature&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <header class="site-header" >
+        <h1 class="site-title"><a href="index.html">millie designs</a></h1>
+        <nav class="main-nav"> 
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="ramblings.html">Ramblings</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main id="main">
+        <!-- contact form -->
+         <section id="contact">
+            <h2>Let's Work Together!</h2>
+            <p>Have a project in mind? Want to collaborate? Or just want to say hi? Fill out the form below and I'll get back to you as soon as possible!</p>
+            <!-- the method selected for the contact form is POST, as the data collected from the form is not intended to be visible in the URL and may contain sensitive information. It will be sent to the server to be processed. -->
+            <form action="" method="post">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject" required>
+                    <option value="">Select a subject</option>
+                    <option value="project-inquiry">Project Inquiry</option>
+                    <option value="general-question">General Question</option>
+                    <option value="feedback">Feedback</option>
+                </select>
+
+                <label for="message">Message</label>
+                <textarea id="message" rows="4" name="message" required></textarea>
+
+                <fieldset>
+                    <legend>Preferred Contact Method</legend>
+                    <input type="radio" id="by-email" name="contact" value="email">
+                    <label for="by-email">Email</label>
+                    <input type="radio" id="by-phone" name="contact" value="phone">
+                    <label for="by-phone">Phone</label>
+                </fieldset>
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+            <p>&copy; 2026 milliedesigns. All rights reserved.</p>
+            <table>
+            <caption>How To Connect</caption>
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col" colspan="2">Social Media</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Details</th>
+                    <td><a href="mailto:milleedesigns@outlook.com">milleedesigns@outlook.com</a></td>
+                    <td>+1 (555) 555-5555</td>
+                    <td><a href="https://www.instagram.com/milleedesigns">@milleedesigns</a></td>
+                    <td><a href="https://www.twitch.tv/milleedesigns">twitch.tv/milleedesigns</a></td>
+                </tr>
+            </tbody>
+        </table>
+        </footer>
+</body>
+</html>
