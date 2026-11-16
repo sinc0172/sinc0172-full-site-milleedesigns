@@ -82,6 +82,11 @@ h5 {
     text-decoration: none;
 }
 
+.site-title a:focus-visible {
+    outline: 0.2rem solid var(--page-background);
+    outline-offset: 0.4rem;
+}
+
 .main-nav {
     display: flex;
     gap: 30px;
@@ -99,6 +104,11 @@ h5 {
     color: var(--secondary-color);
     text-decoration: wavy underline;
     text-decoration-color: var(--secondary-color);
+}
+
+.main-nav a:focus-visible {
+    outline: 0.2rem solid var(--page-background);
+    outline-offset: 0.4rem;
 }
 
 .skip-link {
@@ -166,6 +176,11 @@ h5 {
     border: 1px solid var(--text);
 }
 
+.card a:focus-visible {
+    outline: 0.2rem solid var(--primary-color);
+    outline-offset: 0.4rem;
+}
+
 /* skill list banner */
 
 #skills-list {
@@ -218,6 +233,11 @@ h5 {
     color: var(--primary-color);
 }
 
+#about a:focus-visible {
+    outline: 0.2rem solid var(--primary-color);
+    outline-offset: 0.4rem;
+}
+
 #about img {
     grid-area: image;
 }
@@ -252,6 +272,11 @@ h5 {
     text-decoration: wavy underline;
     color: var(--secondary-color);
     font-weight: 500;
+}
+
+#ramblings a:focus-visible {
+    outline: 0.2rem solid var(--primary-color);
+    outline-offset: 0.4rem;
 }
 
 #ramblings article {
@@ -290,6 +315,11 @@ h5 {
 
 #projects-list li a:hover, #projects-list li a:focus {
     text-decoration: wavy underline;
+}
+
+#projects-list li a:focus-visible {
+    outline: 0.2rem solid var(--primary-color);
+    outline-offset: 0.4rem;
 }
 
 #button-view-projects {
@@ -357,6 +387,11 @@ h5 {
     padding: 15px
 }
 
+#contact button:focus-visible {
+    outline: 0.2rem solid var(--primary-color);
+    outline-offset: 0.4rem;
+}
+
 /* styling the footer */
 footer {
     display: grid;
@@ -394,6 +429,11 @@ footer table th {
 
 footer table td a {
     color: var(--secondary-color);
+}
+
+footer table td a:focus-visible {
+    outline: 0.2rem solid var(--page-background);
+    outline-offset: 0.4rem;
 }
 
 
@@ -469,6 +509,11 @@ footer table td a {
     text-decoration: wavy underline;
 }
 
+#about-content a:focus-visible {
+    outline: 0.2rem solid var(--primary-color);
+    outline-offset: 0.4rem;
+}
+
 /* STYLING INDIVIDUAL PROJECT PAGES */
 #project-links {
     display: grid;
@@ -485,6 +530,11 @@ footer table td a {
 
 #project-links a:hover, #project-links a:focus {
     text-decoration: wavy underline;
+}
+
+#projects-links a:focus-visible {
+    outline: 0.2rem solid var(--primary-color);
+    outline-offset: 0.4rem;
 }
 
 #dirtypig, #mountadanac, #letstalk, #purefreshness {
