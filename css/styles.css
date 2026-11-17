@@ -39,7 +39,7 @@ h1, h2 {
     text-wrap: balance;
     color: var(--primary-color);
     text-decoration: none;
-    padding: 10px;
+    padding: 0.4rem;
 }
 
 h3 {
@@ -73,7 +73,7 @@ h5 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 0.5rem 2rem;
     background-color: var(--primary-color);
 }
 
@@ -89,7 +89,7 @@ h5 {
 
 .main-nav {
     display: flex;
-    gap: 30px;
+    gap: 3rem;
     color: var(--page-background);
 }
 
@@ -113,17 +113,17 @@ h5 {
 
 .skip-link {
     position: absolute;
-    top: -40px;
+    top: -40rem;
     left: 0;
     background-color: var(--primary-color);
     color: var(--page-background);
-    padding: 8px 16px;
+    padding: 1rem 2rem;
     z-index: 100;
     transition: top 0.3s ease;
 }
 
 .skip-link:focus {
-    top: 10px;
+    top: 1rem;
 }
 
 /* card display */
@@ -132,7 +132,7 @@ h5 {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    padding: 10px;
+    padding: 1rem;
 }
 
 .card {
@@ -161,7 +161,7 @@ h5 {
 .card a {
     display: inline-block;
     margin: 10px;
-    padding: 8px 16px;
+    padding: 0.5rem 1rem;
     background-color: var(--primary-color);
     color: var(--page-background);
     text-decoration: none;
@@ -213,7 +213,6 @@ h5 {
 
 #about h2 {
     grid-area: title;
-    padding: 0px;
 }
 
 #about p {
@@ -252,7 +251,7 @@ h5 {
     gap: 40px;
 
     background-color: var(--text);
-    padding: 20px 40px 60px 40px;
+    padding: 0.5rem 0.75rem 1rem 0.75rem;
 }
 
 #ramblings h2 {
@@ -262,7 +261,7 @@ h5 {
 
 #ramblings a {
     grid-area: link;
-    padding: 60px 0 0 0;
+    padding: 3rem 0 0 0;
     color: var(--page-background);
     text-decoration: none;
     font-weight: 500;
@@ -282,7 +281,7 @@ h5 {
 #ramblings article {
     background-color: var(--page-background);
     border-radius: 5px;
-    padding: 10px;
+    padding: 1.5rem;
 }
 
 #nov-5 {
@@ -303,7 +302,7 @@ h5 {
 
 #projects-list {
     grid-area: projects;
-    padding: 0 0 0 40px;
+    padding: 0 0 0 0.75rem;
     border-right-style: solid;
     border-right-color: var(--text);
 }
@@ -325,7 +324,7 @@ h5 {
 #button-view-projects {
     display: inline-block;
     margin: 10px;
-    padding: 8px 16px;
+    padding: 0.5rem 1rem;
     background-color: var(--primary-color);
     color: var(--page-background);
     text-decoration: none;
@@ -342,19 +341,19 @@ h5 {
 
 #contact {
     grid-area: connect;
-    padding: 0 20px 40px 60px;
+    padding: 0 0.5rem 4rem 1rem;
 }
 
 #contact input[type=text], #contact input[type=email] {
     width: 100%;
-    padding: 12px;
+    padding: 0.5rem;
     margin: 10px 0;
     box-sizing: border-box;
 }
 
 #contact select {
     width: 100%;
-    padding: 12px;
+    padding: 0.5rem;
     margin: 10px 0;
     border: 1px solid #b4b2b1;
     background-color: #fefefe;
@@ -362,7 +361,7 @@ h5 {
 
 #contact textarea {
     width: 100%;
-    padding: 12px;
+    padding: 0.5rem;
 }
 
 #contact button {
@@ -372,7 +371,7 @@ h5 {
     background-color: var(--primary-color);
     text-decoration: none;
     border-radius: 5px;
-    padding: 15px;
+    padding: 1rem;
     font-weight: 500;
 }
 
@@ -384,7 +383,7 @@ h5 {
     text-decoration: wavy underline;
     text-decoration-color: var(--text);
     font-weight: 500;
-    padding: 15px
+    padding: 1rem;
 }
 
 #contact button:focus-visible {
@@ -402,7 +401,7 @@ footer {
 
     background-color: var(--primary-color);
     color: var(--page-background);
-    padding: 40px 20px 20px 20px;
+    padding: 3rem 1rem 3rem 1.5rem;
 }
 
 footer p {
@@ -451,7 +450,7 @@ footer table td a:focus-visible {
         "image list"
         "image link";
     gap: 5px;
-    padding: 20px 20px 40px 20px;
+    padding: 1rem 1rem 2rem 1rem;
 }
 
 #about-content img {
@@ -491,7 +490,7 @@ footer table td a:focus-visible {
 #about-content dt {
     font-weight: 500;
     color: var(--dark);
-    padding: 0 15px 0 0;
+    padding: 0 0.1rem 0 0;
 }
 
 #about-content #projects-link {
@@ -518,7 +517,7 @@ footer table td a:focus-visible {
 #project-links {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 50px;
+    padding: 1rem;
     text-align: center;
 }
 
@@ -544,7 +543,7 @@ footer table td a:focus-visible {
         "title first"
         "list second";
     gap: 5px;
-    padding: 20px;
+    padding: 1rem;
 }
 
 #dirtypig h2, #mountadanac h2, #letstalk h2, #purefreshness h2 {
@@ -603,7 +602,7 @@ footer table td a:focus-visible {
         "title title title ."
         "archives content content content";
     gap: 20px;
-    padding: 0 0 60px 0;
+    padding: 0 0 1rem 0;
 }
 
 #ramblings-title {
@@ -621,7 +620,7 @@ footer table td a:focus-visible {
 #archives {
     grid-area: archives;
     margin: 0 0 0 40px;
-    padding: 20px;
+    padding: 1rem;
 
     background-color: var(--secondary-color);
 }
@@ -634,20 +633,21 @@ footer table td a:focus-visible {
     grid-area: content;
     display: grid;
     gap: 10px;
-    padding: 0 20px 0 0;
+    padding: 0 0.5rem 0 0;
     margin: 0 0 0 20px;
 }
 
 #november article {
-    padding: 30px;
+    padding: 1.5rem;
     border-style: solid;
     border-color: var(--dark);
+    border-radius: 5px;
 }
 
 #november article em {
     background-color: var(--primary-color);
     border-radius: 5px;
-    padding: 10px;
+    padding: 0.75rem;
     color: var(--page-background);
 }
 
