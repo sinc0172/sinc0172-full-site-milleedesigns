@@ -13,22 +13,29 @@
     --dark: oklch(0.3 0.1 50);
     --button: oklch(0.7 0.1 50);
     --hover: oklch(0.8 0.05 70);
-}
 
-/* image styling */
-* img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* typography */
-body {
+    /* typography properties */
     font-family: 'Inter', Helvetica, Arial, system-ui, sans-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
     background-color: var(--page-background);
     color: var(--text);
+
+    /* added spacing properities */
+    --border-radius: 10px;
+    --full-space: 1rem;
+    --half-space: 0.5rem;
+    --double-space: 2rem;
+    --button: 0.5rem 1rem;
+    --header: 0.5rem 2rem;
+    --footer: 3rem 1rem 3rem 1.5rem;
+}
+
+/* image styling */
+* img {
+    max-width: 100%;
+    height: auto;
 }
 
 h1, h2 {
@@ -73,7 +80,7 @@ h5 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 2rem;
+    padding: var(--header);
     background-color: var(--primary-color);
 }
 
@@ -132,21 +139,21 @@ h5 {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    padding: 1rem;
+    padding: var(--full-space);
 }
 
 .card {
     flex: 1;
     flex-basis: 300px;
     border: 2px solid var(--dark);
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     text-align: center;
 }
 
 .card img {
     width: 100%;
     height: auto;
-    border-radius: 5px 5px 0 0;
+    border-radius: 10px 10px 0 0;
 }
 
 .card h3 {
@@ -161,11 +168,11 @@ h5 {
 .card a {
     display: inline-block;
     margin: 10px;
-    padding: 0.5rem 1rem;
+    padding: var(--button);
     background-color: var(--primary-color);
     color: var(--page-background);
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
 }
 
 .card a:hover, .card a:focus {
@@ -280,7 +287,7 @@ h5 {
 
 #ramblings article {
     background-color: var(--page-background);
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     padding: 1.5rem;
 }
 
@@ -324,11 +331,11 @@ h5 {
 #button-view-projects {
     display: inline-block;
     margin: 10px;
-    padding: 0.5rem 1rem;
+    padding: var(--button);
     background-color: var(--primary-color);
     color: var(--page-background);
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
 }
 
 #button-view-projects:hover, #button-view-projects:focus {
@@ -346,14 +353,14 @@ h5 {
 
 #contact input[type=text], #contact input[type=email] {
     width: 100%;
-    padding: 0.5rem;
+    padding: var(--half-space);
     margin: 10px 0;
     box-sizing: border-box;
 }
 
 #contact select {
     width: 100%;
-    padding: 0.5rem;
+    padding: var(--half-space);
     margin: 10px 0;
     border: 1px solid #b4b2b1;
     background-color: #fefefe;
@@ -361,7 +368,7 @@ h5 {
 
 #contact textarea {
     width: 100%;
-    padding: 0.5rem;
+    padding: var(--half-space);
 }
 
 #contact button {
@@ -370,8 +377,8 @@ h5 {
     color: var(--page-background);
     background-color: var(--primary-color);
     text-decoration: none;
-    border-radius: 5px;
-    padding: 1rem;
+    border-radius: var(--border-radius);
+    padding: var(--full-space);
     font-weight: 500;
 }
 
@@ -383,7 +390,7 @@ h5 {
     text-decoration: wavy underline;
     text-decoration-color: var(--text);
     font-weight: 500;
-    padding: 1rem;
+    padding: var(--full-space);
 }
 
 #contact button:focus-visible {
@@ -401,7 +408,7 @@ footer {
 
     background-color: var(--primary-color);
     color: var(--page-background);
-    padding: 3rem 1rem 3rem 1.5rem;
+    padding: var(--footer);
 }
 
 footer p {
@@ -517,7 +524,7 @@ footer table td a:focus-visible {
 #project-links {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 1rem;
+    padding: var(--full-space);
     text-align: center;
 }
 
@@ -543,7 +550,7 @@ footer table td a:focus-visible {
         "title first"
         "list second";
     gap: 5px;
-    padding: 1rem;
+    padding: var(--full-space);
 }
 
 #dirtypig h2, #mountadanac h2, #letstalk h2, #purefreshness h2 {
@@ -620,7 +627,7 @@ footer table td a:focus-visible {
 #archives {
     grid-area: archives;
     margin: 0 0 0 40px;
-    padding: 1rem;
+    padding: var(--full-space);
 
     background-color: var(--secondary-color);
 }
@@ -641,12 +648,12 @@ footer table td a:focus-visible {
     padding: 1.5rem;
     border-style: solid;
     border-color: var(--dark);
-    border-radius: 5px;
+    border-radius: var(--border-radius);
 }
 
 #november article em {
     background-color: var(--primary-color);
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     padding: 0.75rem;
     color: var(--page-background);
 }
