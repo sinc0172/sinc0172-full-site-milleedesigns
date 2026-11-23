@@ -11,7 +11,7 @@
 
     /* colour palette with oklch colour values */
     --dark: oklch(0.3 0.1 50);
-    --button: oklch(0.7 0.1 50);
+    --button-color: oklch(0.7 0.1 50);
     --hover: oklch(0.8 0.05 70);
 
     /* typography properties */
@@ -85,7 +85,7 @@ h5 {
 }
 
 .site-title a {
-    color: var(--page-background);
+    color: #f5f2ef;
     text-decoration: none;
 }
 
@@ -97,12 +97,12 @@ h5 {
 .main-nav {
     display: flex;
     gap: 3rem;
-    color: var(--page-background);
+    color: #f5f2ef;
 }
 
 .main-nav a {
     text-decoration: none;
-    color: var(--page-background);
+    color: #f5f2ef;
     font-weight: 600;
     transition: color 0.3s ease;
 }
@@ -148,6 +148,8 @@ h5 {
     border: 2px solid var(--dark);
     border-radius: var(--border-radius);
     text-align: center;
+    background-color: #f5f2ef;
+    color: #3e3b23;
 }
 
 .card img {
@@ -408,7 +410,7 @@ footer {
     gap: 40px;
 
     background-color: var(--primary-color);
-    color: var(--page-background);
+    color: #f5f2ef;
     padding: var(--footer);
 }
 
@@ -674,4 +676,47 @@ footer table td a:focus-visible {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* PREFERS DARK MODE */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #C24325;
+        --secondary-color: #caf2e1;
+        --text: #f5f2ef;
+        --page-background: #000;
+    }
+
+    #about-content h3 {
+        color: var(--button-color);
+    }
+
+    #about-content dt {
+        color: var(--button-color);
+    }
+
+    #ramblings {
+        background-color: var(--dark);
+    }
+
+    #ramblings a {
+        color: var(--text);
+    }
+
+    h4 {
+        color: var(--primary-color);
+    }
+
+    #nov-5 {
+        --page-background: var(--text);
+        color: #000
+    }
+
+    #november h3 {
+        color: var(--button-color);
+    }
+
+    #archives {
+        color: var(--page-background);
+    }
 }
